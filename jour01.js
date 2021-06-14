@@ -32,8 +32,8 @@ console.log(letters);
 
 //exo 8
 var age="42";
-var template = "I'm _ years old";
-console.log(template.replace('_' , age));
+
+console.log(`I'm ${age} years old`);
 
 //Bonus
 
