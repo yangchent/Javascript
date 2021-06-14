@@ -56,4 +56,3 @@ console.log(name +" "  + name1);
 
 var changed= "Bonjour";
 console.log(changed.replace(/o/g, 'a'));
-gi
