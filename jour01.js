@@ -32,11 +32,28 @@ console.log(letters);
 
 //exo 8
 var age="42";
-
-console.log(`I'm ${age} years old`);
+var template=  `I'm ${age} years old`;
+console.log(template);
 
 //Bonus
 
+var someText="This is a page";
+console.log(someText.substr(2,6));
+// is is
 
+console.log(someText.substring(2,6));
+// is i
 
+console.log(someText.slice(2,6));
+//is i
+console.log(someText.slice(-5));
+//page
 
+var name='Durand';
+var name1= "Nicolas";
+console.log(name +" "  + name1);
+//same result
+
+var changed= "Bonjour";
+console.log(changed.replace(/o/g, 'a'));
+gi
