@@ -18,4 +18,25 @@ var food="croissant is meh";
 console.log(food.replace('meh' , 'so good'));
 
 //exo 6
+var basic= "This is Cool";
+var basicUp = basic.toUpperCase();
+var basicDown= basic.toLowerCase();
+console.log(basic);
+console.log(basicUp);
+console.log(basicDown);
+
+//exo 7
+var word = "banana";
+var letters = word.split('');
+console.log(letters);
+
+//exo 8
+var age="42";
+var template = "I'm _ years old";
+console.log(template.replace('_' , age));
+
+//Bonus
+
+
+
 
