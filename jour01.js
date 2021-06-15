@@ -47,12 +47,11 @@ console.log(someText.substring(2,6));
 console.log(someText.slice(2,6));
 //is i
 console.log(someText.slice(-5));
-//page
+//page same result with .substr
 
 var name='Durand';
 var name1= "Nicolas";
-console.log(name +" "  + name1);
-//same result
+//same result with the both
 
 var changed= "Bonjour";
 console.log(changed.replace(/o/g, 'a'));
