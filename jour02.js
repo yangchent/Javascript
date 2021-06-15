@@ -76,24 +76,23 @@ else {
 var month= "January";
 switch(month)
 {
-    case "Winter":
-        console.log("c'est l'hiver");
+    case "January", "December", "November", "Febuary" :
+        console.log("winter");
     break;
-    case "Spring":
-        console.log("c'est printemp");
+    case "March", "April" , "May":
+        console.log("Spring") ;
+    break;     
+    case "june", "july", "August":
+        console.log("summer")
     break;
-    case "Summer":
-        console.log("c'est l'été") ;
-    break;
-    case "Fall" :
-        console.log("c'est l'automne");
-    break;       
+    case "September", "October":
+        console.log("Fall")
     default:
-        console.log("cest n'est pas une season");
+        console.log("Its not a name of month");
 }
 
 //Bonus3
-var roundedNumber=12.4;
+var roundedNumber=3.3;
 console.log(Math.floor(roundedNumber));//3
 console.log(Math.ceil(roundedNumber));//4
 
@@ -104,3 +103,6 @@ else {
     console.log(3);
 }
 //ne march pas avec 12.4 mais d'autre
+
+var aNumber=roundedNumber.toString();
+console.log(aNumber.substring(0, 1));
