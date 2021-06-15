@@ -76,17 +76,18 @@ else {
 var month= "January";
 switch(month)
 {
-    case "January", "December", "November", "Febuary" :
+    case "January" :
         console.log("winter");
     break;
-    case "March", "April" , "May":
+    case "March" :
         console.log("Spring") ;
     break;     
-    case "june", "july", "August":
+    case "june":
         console.log("summer")
     break;
-    case "September", "October":
+    case "September":
         console.log("Fall")
+     break;   
     default:
         console.log("Its not a name of month");
 }
@@ -106,3 +107,5 @@ else {
 
 var aNumber=roundedNumber.toString();
 console.log(aNumber.substring(0, 1));
+
+
