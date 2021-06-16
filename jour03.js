@@ -63,3 +63,24 @@ console.log(revSentence.join(""));
 }
 }
 
+//Bonus 2
+var total= 0;
+var limit= 10;
+var i = 0;
+
+while (i<limit) { 
+    i++
+    total = total + i
+    console.log(total);
+}
+
+//Bonus 3
+var promo = ["Amar", "Andy", "Ange", "Anthony", "Artha",
+ "Barry", "Baydir", "Eliot", "Elodie", "Julien", "Kevin", 
+ "Laura", "Mridha", "Mohamed", "Rahmad", "Victor"," Yangchen"];
+
+ var winner = promo[Math.floor(Math.random() * promo.length)];
+
+ console.log("And the winner is :", winner);
+
+//Bonus
