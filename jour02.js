@@ -108,4 +108,32 @@ else {
 var aNumber=roundedNumber.toString();
 console.log(aNumber.substring(0, 1));
 
+/*//CORRECTION BONUS1
+var random= Math.floor(Math.random()*(6-1+1)+1);
+if (random === 6){
+    console.log("yes i win");
+}
+else {
+    console.log("So close");
+}
 
+//Bonus3 CORRECTION
+var roundedNumber =3.6
+
+if (((roundedNumber- Math.floor(roundedNumber))*10)>= 5){
+    console.log(Math.ceil(roundedNumber))
+}
+else 
+{
+    console.log(Math.floor(roundedNumber));
+}
+////or Bonus 3
+
+if (roundedNumber % 1 >= 0.5){
+
+console.log(Math.ceil(roundedNumber))
+}
+else 
+{
+    console.log(Math.floor(roundedNumber));
+}*/
