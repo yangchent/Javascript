@@ -29,4 +29,37 @@ console.log(numbers.reverse());
 console.log(numbers.sort((a, b) => a - b));
 
 //exo 5 - Boucle
+var total= 0;
+var limit= 10;
+
+for(var i= 0; i<=limit; i++){
+    total = total + i;
+}
+console.log(total);
+
+//exo 6- REverse
+var sentence = "Hello Konexio!";
+var tabSentence = sentence.split('');
+var revSentence = [];
+
+for (var i =0; i < tabSentence.length; i++) {
+    revSentence.unshift(tabSentence[i]);
+}
+console.log(revSentence.join(""));
+
+ //Bonus
+ for(var i=0; i<100; i++){
+     if( i % 3 === 0){
+         console.log("fizz");
+     }
+ else if (i % 5 === 0){
+     console.log("buzz");
+     }
+    if(i % 3 === 0 && i % 5 === 0){
+    console.log("fizzbuzz");
+    }
+ else if(i % 7 === 0){
+    continue;
+}
+}
 
