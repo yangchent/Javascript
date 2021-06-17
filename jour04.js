@@ -60,9 +60,8 @@ console.log(addUp(12));
 
 //Exo 6- Time
 
-function format(num) {
-    num = Number(num);
-
+function format(num) 
+{
     var h = Math.floor(num / 3600);
     var m = Math.floor(num % 3600 / 60);
     var s = Math.floor(num % 3600 % 60);
@@ -70,3 +69,16 @@ function format(num) {
     return ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
 }
 console.log(format(3700));
+
+//Bonus
+
+function generatePassword() {
+    var length = 8,
+        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
+console.log(generatePassword());
