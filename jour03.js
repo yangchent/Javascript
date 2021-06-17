@@ -33,7 +33,7 @@ var total= 0;
 var limit= 10;
 
 for(var i= 0; i<=limit; i++){
-    total = total + i;
+     total = total + i;
 }
 console.log(total);
 
@@ -52,15 +52,15 @@ console.log(revSentence.join(""));
      if( i % 3 === 0){
          console.log("fizz");
      }
- else if (i % 5 === 0){
+    else if (i % 5 === 0){
      console.log("buzz");
      }
     if(i % 3 === 0 && i % 5 === 0){
     console.log("fizzbuzz");
     }
- else if(i % 7 === 0){
-    continue;
-}
+    else if(i % 7 === 0){
+        continue;
+    }
 }
 
 //Bonus 2
@@ -83,4 +83,9 @@ var promo = ["Amar", "Andy", "Ange", "Anthony", "Artha",
 
  console.log("And the winner is :", winner);
 
-//Bonus
+//Bonus 4 
+var myNum =[];
+for (var i = 0; i <20; i++){
+    myNum.push(Math.floor(Math.random()*100));
+}
+console.log(myNum);
