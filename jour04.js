@@ -48,3 +48,25 @@ compare(34,5);
 compare(7,89);
 compare(5,5);
 
+//Exo 5 - Add up
+function addUp(num){
+    var numAdd=0;
+     for( var i = 0; i<=num; i++){
+         numAdd= numAdd +i ;
+     }
+     return numAdd
+}
+console.log(addUp(12));
+
+//Exo 6- Time
+
+function format(num) {
+    num = Number(num);
+
+    var h = Math.floor(num / 3600);
+    var m = Math.floor(num % 3600 / 60);
+    var s = Math.floor(num % 3600 % 60);
+
+    return ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
+}
+console.log(format(3700));
