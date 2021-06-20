@@ -71,14 +71,35 @@ function format(num)
 console.log(format(3700));
 
 //Bonus
-
-function generatePassword() {
-    var length = 8,
-        charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         retVal = "";
-    for (var i = 0, n = charset.length; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
+function generatePassword(num) {
+    
+        if (num < 6 || num > 15){
+            console.log("error");
+        }
+        else{
+    for (var i = 0; i < num; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
     }
     return retVal;
 }
-console.log(generatePassword());
+}
+console.log(generatePassword(12));
+
+// Bonus using charCode not working
+var charset = String.fromCharCode(65,90),
+        retVal = "";
+function generatePassword(num) {
+    
+        if (num < 6 || num > 15){
+            console.log("error");
+        }
+        else{
+    for (var i = 0; i < num; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+    return retVal;
+}
+}
+console.log(generatePassword(12));
