@@ -6,7 +6,7 @@ var cat = {
 }
 console.log(cat);
 console.log(cat.age);
-if (cat.isCute === true){
+if (cat.isCute){ // if and else understands true and false so we don't need to give any condition since its already true.
     console.log("So cute !");
 }
 
@@ -19,6 +19,7 @@ var cat2 = {
 var cats = [ cat , cat2 ];
 console.log(cats[0].age);
 console.log(cats[1].isCute);
+console.log(cats[1]["isCute"]);
 
 // Exo 3 - Even
 function checkIfEven(num){
@@ -54,9 +55,10 @@ function addUp(num){
      for( var i = 0; i<=num; i++){
          numAdd= numAdd +i ;
      }
-     return numAdd
+     return numAdd;
 }
 console.log(addUp(12));
+
 
 //Exo 6- Time
 
