@@ -20,7 +20,4 @@ while (dice !==6){
 console.log(count);
 
 // 3
-var ussainBolt = 0,
-    tysonGay = 0;
-
-    
+v
