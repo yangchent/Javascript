@@ -27,14 +27,15 @@ var ussainBolt = 0,
 while (ussainBolt <=100 || tysonGay <=100){
     ussainBolt += random;
     tysonGay += random;
-    if(ussainBolt>=100){
+    if(tysonGay >= 100){
         console.log("winner is Ussain Bolt");
     }
-    else if (tysonGay>= 100){
+    else if (ussainBolt >= 100){
         console.log("The winner is Tyson Gay");
     }
+    tysonGay++;
     ussainBolt++;
-tysonGay++;
+
 }
 //Exo 4
 //5
