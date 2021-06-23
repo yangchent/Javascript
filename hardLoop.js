@@ -32,10 +32,17 @@ while( i <=50){
         console.log(numbers[i]);
     }
     i++;
-}
+ }
 //EXO 4
 var words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
-for (var i =0; i <= words.length; i++){
-    var wordsspl= words[i].split(',');
+var letters= [];
+var count = 0;
+for (var i = 0; i <= words.length -1; i++){
+     letters= words[i].split(" ").join("");
+     for(var a = 0; a < words.length  ; a++){
+        if(letters[a]=='o'){
+            count++;
+     }
+  }
 }
-console.log(wordsspl);
+console.log(count)
