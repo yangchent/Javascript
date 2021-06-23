@@ -26,8 +26,37 @@ else {
 
 //EXO 3 to import function in table-utiles.js
  var multiplier= require('./table-utile');
- 
+const { get } = require("prompt");
+
 //EXO 4
-var mysteryNum = Math.floor(Math.random() * 100 + 1);
-function play(){
-}
+var prompt = require("prompt");
+
+ var mysteryNum = Math.floor(Math.random() * 100 + 1);
+  function play() {
+    prompt.get({
+        name : "userNum",
+     description: "Quel est le nombre mystère ?",
+    },
+     function (err,res){
+        if (err){
+            return onErr(err);
+        }
+        else if (res.userNum<1||res.userNum>100){
+            console.log("Give me number between 1 and 100");
+            play();
+        }
+        else if(res.userNum < mysteryNum){
+            console.log("C'est plus !");
+            play();
+        }
+        else if (res.userNum > mysteryNum){
+            console.log("C'est moins !");
+            play();
+        }
+        else if (res.userNum ==mysteryNum){
+            console.log("Bravo !!");
+        }
+     }
+    )
+  };
+  play();

@@ -1,4 +1,3 @@
-
  //Exo 2 Multiply
  function multiply(num){
     for (var i = 1; i <= 10; i++){
@@ -30,4 +29,7 @@
  else {
      console.log("Error");
  }
- 
+ //exo 3 export
+ module.exports.multiply = multiply;
+
+ module.exports.addition = addition;
