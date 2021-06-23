@@ -23,3 +23,11 @@ else {
 
 // calculator(4 ,"*", 5);
 // console.log(process.argv)
+
+//EXO 3 to import function in table-utiles.js
+ var multiplier= require('./table-utile');
+ 
+//EXO 4
+var mysteryNum = Math.floor(Math.random() * 100 + 1);
+function play(){
+}
