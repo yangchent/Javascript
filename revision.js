@@ -35,3 +35,17 @@ function countEach(str){
 console.log(countEach("xxxoxoo"));
 
 //EXO 3
+function checkPal(str){
+
+    var splitStr = str.split(""),
+    reverseStr = splitStr.reverse(),
+    joinStr = reverseStr.join('');
+
+    if(joinStr == str){
+        return "Palindrome! ";
+    }
+    else {
+        return "Nope";
+    }
+}
+console.log(checkPal("racecar"));
