@@ -33,13 +33,12 @@ while( i <=50){
     }
     i++;
  }
-//EXO 4
+//EXO 4 Nested Loop
 var words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
-var letters= [];
 var count = 0;
 for (var i = 0; i <= words.length -1; i++){
-     letters= words[i].split(" ").join("");
-     for(var a = 0; a < words.length  ; a++){
+    let letters= words[i];
+     for(var a = 0; a < letters.length  ; a++){
         if(letters[a]=='o'){
             count++;
      }
