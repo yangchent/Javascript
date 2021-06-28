@@ -1,14 +1,14 @@
 
-// //EXO 1
-// function sortLetters(string){
+//EXO 1
+function sortLetters(string){
 
-//   //  string = string.split('');
-//   //  string = string.sort();
-//   //  string = string.join('');
+  //  string = string.split('');
+  //  string = string.sort();
+  //  string = string.join('');
 
-//    console.log(string.split("").sort().join(""));
-//     }
-// sortLetters("konexio");
+   console.log(string.split("").sort().join(""));
+    }
+sortLetters("konexio");
 
 //exo 2
 function countEach(str){
@@ -31,35 +31,53 @@ function countEach(str){
            
 console.log(countEach("xxxxoo"));
 
-// //EXO 3
-// function checkPal(str){
+ //EXO 3
+function checkPal(str){
 
-//     var splitStr = str.split(""),
-//     reverseStr = splitStr.reverse(),
-//     joinStr = reverseStr.join('');
+    var splitStr = str.split(""),
+        reverseStr = splitStr.reverse(),
+        joinStr = reverseStr.join('');
 
-//     if(joinStr == str){
-//         return "Palindrome! ";
-//     }
-//     else {
-//         return "Nope";
-//     }
-// }
-// console.log(checkPal("racecar"));
+    if(joinStr == str){
+        return "Palindrome! ";
+    }
+    else {
+        return "Nope";
+    }
+}
+console.log(checkPal("laptop"));
 
-// //Exo 4
-// function swap(string){
-//     var upWord =[];
-//     var lowWord= [];
-//     for (i=0; i<string.length; i++) {
-//         if (string[i] == string[i].toLowerCase()) {
-//             upWord[i] = string[i].toUpperCase();
-//             return lowword[i];
-//         }
-//         else {
-//           lowWord[i] = string[i].toLowerCase();
-//           return upWord[i];
-//         }
-//       }
-//     }
-// console.log(swap("Hello"));
+//correction Exo 3  
+function checkPal(str){
+  return str.split("").reverse().join("") ==str;}
+  console.log(checkPal("racecar"));
+//Exo 4
+var word= [];
+function swap(string){
+  
+    for (var i=0; i<string.length; i++) {
+        if (string[i] == string[i].toLowerCase()) {
+            word.push(string[i].toUpperCase());
+            return word;
+        }
+        else if (string[i] == string[i].toUpperCase()){
+          word.push(string[i].toLowerCase());
+          return word;
+        }
+      }
+    }
+console.log(swap("Hello World"));
+//correction
+var word ="";
+function swap(string){
+  for (var i =0; i< string.length; i ++){
+    if (string[i] == string[i].toUpperCase()) {
+       word += string[i].toLowerCase();
+  }
+  else if(string[i] == string[i].toLowerCase()) {
+   word += string[i].toUpperCase();
+  }
+  }
+    return word;
+}
+console.log(swap("Hello World"));
