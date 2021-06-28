@@ -71,36 +71,33 @@ calculateAge("1985-11-24");
 
 var prompt = require("prompt");
 
-prompt.start();  // démarre le prompt
-
 function checkProfile() { 
 
-
-prompt.get([{
+  var properties= [{
     name : "Username", 
-    description : "Name",
-    validator : /^[a-zA-Z\s\-]+$/gi
-},
-{
+    validator : /([a-zA-Z\s\-]+)/gi,
+  },
+  {
     name : "e-mail",
-    description : "e-mail",
-    validator: /[a-z@A-Z1-9-_]/gi
-},
-{
+    validator: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i,
+  },
+  {
     name : "password",
-    description : "Password",
-    validator : /[a-z@A-Z1-9-_]/gi
-},
+    validator : /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/i
+  }];
 
-function (err, res) { 
-  
-  if (res.validator === true){
-  console.log("All good ! ");
- }
-  else {
-    console.log("error");
-  }
-}]);
+prompt.start(); 
+    function onErr(err) { 
+        console.log(err);
+        return 1;
+    }
+    prompt.get(properties, function (err, res) {
+        if (err) {
+            return onErr(err);
+        }
+        console.log("All good !!");
+    });
 }
-
 checkProfile();
+
+
