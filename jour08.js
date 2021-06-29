@@ -1,4 +1,4 @@
-// //EXO 1 COUNTRIES
+//EXO 1 COUNTRIES
 const axios= require('axios');
 
 
@@ -20,4 +20,15 @@ axios.get("https://api.chucknorris.io/jokes/random").then ((res) => {
 })
 }
 getFact();
+
+//EXO Pokemon
+ catchPokemon= (num) => {
+    axios.get("https://pokeapi.co/api/v2/pokemon/" + num).then ((res) => {
+        var list = res.data;
+        console.log(list.name)
+});
+ }
+catchPokemon(1);
+
+
 
