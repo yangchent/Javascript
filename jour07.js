@@ -25,7 +25,8 @@ var longNames = [
 	}
 ];
 var shortNames = longNames.map(function(name){
-    return {name : name.firstName +  name.lastName};
+    // return {name : name.firstName +  name.lastName};
+	return {name :` ${name.firstName} ${name.lastName}` };
 });
     console.log(shortNames);
 
@@ -74,4 +75,8 @@ var  chocolateFlavor= soldOut.map(a => a.status = "sold out !")
 ;
 console.log(soldOut);
 
+
 //bonus
+var prompt= require("prompt")
+    
+

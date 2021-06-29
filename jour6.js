@@ -69,35 +69,64 @@ calculateAge("1985-11-24");
 
 //Exo 3 VALIDATOR
 
+// var prompt = require("prompt");
+
+// function checkProfile() { 
+
+//   var properties= [{
+//     name : "Username", 
+//     validator : /([a-zA-Z\s\-]+)/gi,
+//   },
+//   {
+//     name : "e-mail",
+//     validator: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i,
+//   },
+//   {
+//     name : "password",
+//     validator : /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/i
+//   }];
+
+// prompt.start(); 
+//     function onErr(err) { 
+//         console.log(err);
+//         return 1;
+//     }
+//     prompt.get(properties, function (err, res) {
+//         if (err) {
+//             return onErr(err);
+//         }
+//         console.log("All good !!");
+//     });
+// }
+// checkProfile();
+
+
 var prompt = require("prompt");
-
-function checkProfile() { 
-
-  var properties= [{
-    name : "Username", 
-    validator : /([a-zA-Z\s\-]+)/gi,
-  },
-  {
-    name : "e-mail",
-    validator: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i,
-  },
-  {
-    name : "password",
-    validator : /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/i
-  }];
-
-prompt.start(); 
-    function onErr(err) { 
-        console.log(err);
-        return 1;
-    }
-    prompt.get(properties, function (err, res) {
-        if (err) {
-            return onErr(err);
-        }
-        console.log("All good !!");
-    });
-}
-checkProfile();
-
-
+var schema = {    properties: {
+          email: { pattern: /^\S+@\S+\.\S+$/, 
+                  required: true, 
+                  message: "Email non valide" 
+        }, 
+          username: { pattern: /^[a-zA-Z-]+$/, 
+                      required: true, 
+                      message: "Username non valide" 
+        },       
+          password: {  required: true,
+                        message: "Password non valide",           
+              conform: function(value) {                
+                     if (value.search(/.{6,}/) === -1) {  
+                        return false;               
+                     }
+                if (value.search(/[a-zA-Z]/) === -1) {    
+                   return false;                }
+                if (value.search(/[0-9]/) === -1) {          
+                    return false;                }
+                if (value.search(/[^a-zA-Z0-9-]/) > -1) {                
+                    return false;                }
+                return true;            
+              }        
+            }    
+    },
+  };
+prompt.start();
+prompt.get(schema, (err, res) => {    console.log(res);});
