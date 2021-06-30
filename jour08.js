@@ -30,5 +30,21 @@ getFact();
  }
 catchPokemon(1);
 
+// // To study :
+// axios.get("https://pokeapi.co/api/v2/pokemon/").then(function (res) {
+//     const pokemonData = res.data; 
+//     const pokemonList = pokemonData.results
+//     const pokemonName = pokemonList.map(pokemon => pokemon.name); 
+//     function catchPokemon(num1) {
+//         console.log("id :", num1);
+//         console.log("name :", pokemonName[num1]);
+//     }
+//     catchPokemon (6)
+// });
+var player = 0;
+for (i = Math.floor(Math.random()* (10 - 1) + 1); i <21 ; i++){
+    player += i;
+}
+    
 
-
+var bank= Math.floor(Math.random()* (21 - 16) + 16);
