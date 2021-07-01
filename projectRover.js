@@ -1,12 +1,6 @@
 const prompt= require("prompt");
       prompt.start()
-// var properties = [{
-// 	name : "Put a letter";
-	
-// }]	  
-// prompt.get(properties, function(err,res){
-	
-// }
+
 var grid = [
 	[" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
 	[" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
@@ -20,10 +14,10 @@ var grid = [
 	[" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 ];
 var rover= { 
-	direction :"S",
+	direction :"N",
 	x:0,
 	y:0,
-	travelLog:[],
+	travelLog:["x","y"],
 };
 
 function turnLeft(rover){
@@ -71,7 +65,7 @@ function turnRight(rover){
 		// console.log(rover + "this is north")
 	}
 	 console.log(rover);
-	  grid[rover.y][rover.x]=rover.direction
+	  grid[rover.y][rover.x]= rover.direction
   
 };
 
@@ -79,17 +73,17 @@ function moveForward(rover){
 	if((rover.x<0||rover.x>10)||(rover.y<0||rover.y>10)){
 			console.log("go other direction")
 	}
-	else if(rover.direction==="N"){
-		rover.x--;	
+	else if(rover.direction==="N"){					
+		rover.y--;						
 	}
-	else if(rover.direction==="E"){
-		rover.y++;	
+	else if(rover.direction==="E"){		
+		rover.x--;			
 	}
 	else if(rover.direction==="S"){
-		rover.x++;	
+		rover.y++;	
 	}
 	else if(rover.direction==="W"){
-		rover.y--;	
+		rover.x++;	
 	}
 	console.log(rover)
 }
@@ -99,16 +93,16 @@ function moveBackward(rover){
 		console.log("go other direction")
 	}
 	else if(rover.direction==="N"){
-		rover.x++;	
+		rover.y++;	
 	}
 	else if(rover.direction==="E"){
-		rover.y--;	
+		rover.x++;	
 	}
 	else if(rover.direction==="S"){
-		rover.x--;	
+		rover.y--;	
 	}
 	else if(rover.direction==="W"){
-		rover.y++;	
+		rover.x--;	
 	}
 	console.log(rover)
 }
@@ -120,16 +114,20 @@ function pilotRover(string){
  for ( var i =0; i <= string.length; i ++ ){
 		if (string[i]==="l"){
 			turnLeft(rover)
+			rover.travelLog.push([rover.x, rover.y]);
 		}
 		else if(string[i]==="r"){
 			turnRight(rover)
+			rover.travelLog.push([rover.x, rover.y]);
 		}
 		else if(string[i]==="f"){
 			moveForward(rover)
+			rover.travelLog.push([rover.x, rover.y]);
 		}
 
 		else if(string[i]==="b"){
 			moveBackward(rover)
+			rover.travelLog.push([rover.x, rover.y]);
 		}
  }
  console.table(grid)
